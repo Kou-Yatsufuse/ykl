@@ -1,7 +1,9 @@
 //------------------------------------------------------------------------------
-//	ykl.js
+//	ykl-1.3.0.js
 //------------------------------------------------------------------------------
-//	Copyright (c) 2015 - 2021 Kou Yatsufuse
+//	Copyright (c) 2015 - 2020 Kou Yatsufuse
+//	Released under the MIT license
+//	http://opensource.org/licenses/mit-license.php
 //------------------------------------------------------------------------------
 
 /**
@@ -2143,6 +2145,7 @@ ykl.tileImages.prototype._createImageElement = function(imgData)
 	imgElement.src = imgData.path;
 	imgElement.width = imgData.w;
 	imgElement.height = imgData.h;
+	imgElement.loading = "lazy";
 	imgElement.onclick = function(){ ykl.showImage.execute(imgData.path, imgData.w, imgData.h); }
 
 	// 作成した要素を返す。
